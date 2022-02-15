@@ -1,16 +1,18 @@
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import { Typography, Stack } from '@mui/material';
+import MyTimeline from './timeline';
+import OutlinedCard from './card';
+import Resume from './resume';
 
-const drawerWidth = 240;
-
-function Content() {
+function Content(props) {
     return (
         <Box
             component="main"
-            sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+            sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${props.drawerWidth}px)` } }}
         >
-            <Toolbar />
+            <Typography variant="h2" component="div" gutterBottom>
+                Adina Raluca Stoica
+            </Typography>
             <Typography paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
@@ -25,6 +27,11 @@ function Content() {
                 consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
                 sapien faucibus et molestie ac.
             </Typography>
+            <Stack direction="row" spacing={2}>
+                <OutlinedCard />
+                <OutlinedCard />
+                <OutlinedCard />
+            </Stack>
             <Typography paragraph>
                 Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
                 eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
@@ -38,6 +45,8 @@ function Content() {
                 eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
                 posuere sollicitudin aliquam ultrices sagittis orci a.
             </Typography>
+            <MyTimeline />
+            <Resume />
         </Box>
     );
 }
