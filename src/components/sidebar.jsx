@@ -1,10 +1,15 @@
 import * as React from 'react';
-import { Avatar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack } from '@mui/material';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import { Avatar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Link } from '@mui/material';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import InboxIcon from '@mui/icons-material/Inbox';
+import ArticleIcon from '@mui/icons-material/Article';
+import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-import { Link } from "react-router-dom";
+import { Link as RouteLink } from "react-router-dom";
 
 import me from "../images/me.jpeg";
 
@@ -22,21 +27,21 @@ function Sidebar(props) {
             <Avatar alt="Adina Stoica" src={me}
                 sx={{ width: `${avatarWidth}px`, height: `${avatarWidth}px`, ml: `${(props.drawerWidth - avatarWidth) / 2}px` }} />
             <List>
-                <ListItem button key="about" selected={props.selectedKey === "about"} component={Link} to="/about" >
+                <ListItem button key="about" selected={props.selectedKey === "about"} component={RouteLink} to="/about" >
                     <ListItemIcon>
-                        <InboxIcon />
+                        <PersonOutlineIcon />
                     </ListItemIcon>
                     <ListItemText primary="About Me" />
                 </ListItem>
-                <ListItem button key="resume" selected={props.selectedKey === "resume"} component={Link} to="/resume">
+                <ListItem button key="resume" selected={props.selectedKey === "resume"} component={RouteLink} to="/resume">
                     <ListItemIcon>
-                        <MailIcon />
+                        <ArticleIcon />
                     </ListItemIcon>
                     <ListItemText primary="Resume" />
                 </ListItem>
-                <ListItem button key="code" selected={props.selectedKey === "code"} component={Link} to="/">
+                <ListItem button key="code" selected={props.selectedKey === "code"} component={RouteLink} to="/">
                     <ListItemIcon>
-                        <InboxIcon />
+                        <DeveloperModeIcon />
                     </ListItemIcon>
                     <ListItemText primary="Code" />
                 </ListItem>
@@ -51,6 +56,21 @@ function Sidebar(props) {
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
+            </List>
+            <Divider />
+            <List>
+                <ListItem button key="code" component={Link} href="https://www.linkedin.com/in/adinutzyc21/" rel="noopener noreferrer" target="_blank" underline="none">
+                    <ListItemIcon>
+                        <LinkedInIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="LinkedIn" />
+                </ListItem>
+                <ListItem button key="code" component={Link} href="https://github.com/adinutzyc21" rel="noopener noreferrer" target="_blank" underline="none">
+                    <ListItemIcon>
+                        <GitHubIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="GitHub" />
+                </ListItem>
             </List>
         </Stack>
     );

@@ -29,6 +29,7 @@ function Content(props) {
                 <OutlinedCard />
                 <OutlinedCard />
                 <OutlinedCard />
+                <OutlinedCard />
             </Stack>
             <Typography paragraph>
                 Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
