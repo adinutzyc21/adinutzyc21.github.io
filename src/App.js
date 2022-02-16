@@ -1,17 +1,15 @@
 import './App.css';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
+import { Box, CssBaseline } from '@mui/material';
 
 import Sidebar from './components/sidebar';
 import Content from './components/content';
 
-const drawerWidth = 240;
+export const drawerWidth = 240;
 function App() {
     return (
-
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <Sidebar drawerWidth={drawerWidth} />
+            <Sidebar drawerWidth={drawerWidth} selectedKey="about" />
             <Content drawerWidth={drawerWidth} />
         </Box>
     );

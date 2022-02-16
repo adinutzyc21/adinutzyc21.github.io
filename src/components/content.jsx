@@ -1,8 +1,6 @@
-import Box from '@mui/material/Box';
-import { Typography, Stack } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
 import MyTimeline from './timeline';
 import OutlinedCard from './card';
-import Resume from './resume';
 
 function Content(props) {
     return (
@@ -46,7 +44,6 @@ function Content(props) {
                 posuere sollicitudin aliquam ultrices sagittis orci a.
             </Typography>
             <MyTimeline />
-            <Resume />
         </Box>
     );
 }
