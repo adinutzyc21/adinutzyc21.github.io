@@ -1,6 +1,6 @@
-import { Box, Typography, Stack } from '@mui/material';
-import MyTimeline from './timeline';
-import OutlinedCard from './card';
+import { Box, Typography, Link/*, Stack*/ } from '@mui/material';
+// import MyTimeline from './timeline';
+// import OutlinedCard from './card';
 
 function Content(props) {
     return (
@@ -12,39 +12,33 @@ function Content(props) {
                 Adina Raluca Stoica
             </Typography>
             <Typography paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                sapien faucibus et molestie ac.
+                Welcome to my website! I am a full-stack software engineer with an interest in front-end development and improving
+                user experiences. You might be interested in my {" "}
+                <Link href="http://adinastoica.com/extras/StoicaAdina_Resume.pdf" rel="noopener noreferrer" target="_blank"
+                    underline="none">Resume</Link>, and you can also check out my {" "}
+                <Link href="https://www.linkedin.com/in/adinutzyc21/" rel="noopener noreferrer" target="_blank"
+                    underline="none">LinkedIn</Link>.
             </Typography>
-            <Stack direction="row" spacing={2}>
+            <Typography paragraph>
+                Since June 2017, I have been a <b>Senior Software Engineer at Bloomberg LP</b> in New York City.
+                I am currently in the <b>Recruiting Technology</b> team, where I am working on improving the sorcing experience
+                of Bloomberg technical recruiters by providing them with a CRM solution that integrates in-house Bloomberg
+                Terminal functionality and various career websites through a Chrome extension written in React. <br />
+                Before this, I was in the <b>Asset Investment Management</b> Organization, first on a team working on a
+                blotter for post trade, and later on a team working on a key settings screen.
+            </Typography>
+            <Typography paragraph>
+                Before Bloomberg, I was a <b>Software Engineer at Cerner Corporation</b> in Kansas City, MO. One of my main
+                projects while therewas a Mass Vaccination solution for streamlining vaccine administration, which has been
+                efficiently used by Cerner client hospitals across the world for COVID-19 vaccine administration since 2021.
+            </Typography>
+            {/* <Stack direction="row" spacing={2}>
                 <OutlinedCard />
                 <OutlinedCard />
                 <OutlinedCard />
                 <OutlinedCard />
             </Stack>
-            <Typography paragraph>
-                Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-                eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-                neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-                tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-                sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-                tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-                gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-                tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-                eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-                posuere sollicitudin aliquam ultrices sagittis orci a.
-            </Typography>
-            <MyTimeline />
+            <MyTimeline /> */}
         </Box>
     );
 }

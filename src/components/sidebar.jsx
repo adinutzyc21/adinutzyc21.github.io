@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Avatar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Link } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import InboxIcon from '@mui/icons-material/Inbox';
+// import InboxIcon from '@mui/icons-material/Inbox';
 import ArticleIcon from '@mui/icons-material/Article';
-import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
-import MailIcon from '@mui/icons-material/Mail';
+// import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+// import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -39,14 +39,14 @@ function Sidebar(props) {
                     </ListItemIcon>
                     <ListItemText primary="Resume" />
                 </ListItem>
-                <ListItem button key="code" selected={props.selectedKey === "code"} component={RouteLink} to="/">
+                {/* <ListItem button key="code" selected={props.selectedKey === "code"} component={RouteLink} to="/">
                     <ListItemIcon>
                         <DeveloperModeIcon />
                     </ListItemIcon>
                     <ListItemText primary="Code" />
-                </ListItem>
+                </ListItem> */}
             </List>
-            <Divider />
+            {/* <Divider />
             <List>
                 {['Research', 'Projects', 'Personal', 'Course Highlights'].map((text, index) => (
                     <ListItem button key={text}>
@@ -56,7 +56,7 @@ function Sidebar(props) {
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
-            </List>
+            </List> */}
             <Divider />
             <List>
                 <ListItem button key="code" component={Link} href="https://www.linkedin.com/in/adinutzyc21/" rel="noopener noreferrer" target="_blank" underline="none">
