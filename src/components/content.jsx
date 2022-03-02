@@ -2,7 +2,7 @@ import { Box, Typography, Link/*, Stack*/ } from '@mui/material';
 // import MyTimeline from './timeline';
 // import OutlinedCard from './card';
 
-function Content(props) {
+export default function Content(props) {
     return (
         <Box
             component="main"
@@ -14,8 +14,8 @@ function Content(props) {
             <Typography paragraph>
                 Welcome to my website! I am a full-stack software engineer with an interest in front-end development and improving
                 user experience. You might be interested in my {" "}
-                <Link href="http://adinastoica.com/extras/StoicaAdina_Resume.pdf" rel="noopener noreferrer" target="_blank"
-                    underline="none">Resume</Link>, and you can also check out my {" "}
+                <Link href="https://drive.google.com/file/d/1-yBduZ8VU4Gxjpgi1DWN6U5bQ0uqPEsR/view?usp=sharing" rel="noopener noreferrer" target="_blank" underline="none">
+                    Resume</Link>, and you can also check out my {" "}
                 <Link href="https://www.linkedin.com/in/adinutzyc21/" rel="noopener noreferrer" target="_blank"
                     underline="none">LinkedIn</Link>.
             </Typography>
@@ -32,7 +32,30 @@ function Content(props) {
                 projects there was a Mass Vaccination solution for streamlining vaccine administration, which has been more recently
                 used by Cerner client hospitals across the world to improve COVID-19 vaccine administration.
             </Typography>
-            {/* <Stack direction="row" spacing={2}>
+            <Typography paragraph>
+                I received my <b>Master's Degree in Computer Science from Washington University in St Louis </b> (Wash U)
+                in August 2014. Between August 2011 and August 2014, I conducted research in computer vision at Wash U.
+            </Typography>
+            <Typography paragraph>
+                I spent the Summer 2014 semester in Boston, interning at Mitsubishi Electric Research Laboratories (MERL). There, I
+                worked in the Spatial Analysis group, on an indoor 3D reconstruction algorithm using images and 3D models.
+            </Typography>
+            <Typography paragraph>
+                I received my <b>Bachelor's Degree in Computer Science from Bard College</b> in May 2011. At Bard, I was involved in
+                the research activities of the Bard Laboratory for Algebraic and Symbolic Computation. I also took part, for a
+                semester, in the Bard Globalization and International Affairs Program in New York City (BGIA). As part of the program,
+                I was a Web Communication Intern at Human Rights First.
+            </Typography>
+            <Typography paragraph>
+                During the summers of my freshman, sophomore and junior years at Bard, I participated in various Research Experience
+                For Undergraduates (REU) programs. The first two summers I was at the University of Houston, performing research on
+                thermal imaging for stress recognition. The last summer I went to Clemson University, where I performed research on
+                distance estimation in virtual environments.
+            </Typography>
+            {/* <Typography paragraph>
+                You can read more about my research and in the Projects section of this website.
+            </Typography>
+            <Stack direction="row" spacing={2}>
                 <OutlinedCard />
                 <OutlinedCard />
                 <OutlinedCard />
@@ -42,5 +65,3 @@ function Content(props) {
         </Box>
     );
 }
-
-export default Content;
