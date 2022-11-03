@@ -1,14 +1,15 @@
-import { Box, CssBaseline, Stack } from '@mui/material';
+import React from "react";
+import { Box, CssBaseline, Stack } from "@mui/material";
 import { drawerWidth } from "../App";
 
-import Sidebar from '../components/sidebar';
+import Sidebar from "../components/sidebar";
 import ResumeContent from "../components/resumeContent";
-import Footer from '../components/footer';
+import Footer from "../components/footer";
 
 export default function Resume() {
     return (
         <Stack direction="column">
-            <Box sx={{ display: 'flex' }}>
+            <Box sx={{ display: "flex" }}>
                 <CssBaseline />
                 <Sidebar drawerWidth={drawerWidth} selectedKey="resume" />
                 <ResumeContent drawerWidth={drawerWidth} />
