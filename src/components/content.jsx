@@ -103,8 +103,7 @@ export default function Content(props) {
                 <OutlinedCard />
                 <OutlinedCard />
                 <OutlinedCard />
-            </Stack>
-            <MyTimeline /> */}
+            </Stack>*/}
         </Box>
     );
 }

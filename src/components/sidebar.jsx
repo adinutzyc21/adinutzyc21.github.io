@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Avatar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Link } from '@mui/material';
+import { Avatar, Box, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Stack, Link, Collapse } from '@mui/material';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 // import InboxIcon from '@mui/icons-material/Inbox';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -8,6 +8,9 @@ import ArticleIcon from '@mui/icons-material/Article';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import InsightsIcon from '@mui/icons-material/Insights';
 
 import { Link as RouteLink } from "react-router-dom";
 
@@ -20,6 +23,16 @@ function Sidebar(props) {
         setMobileOpen(!mobileOpen);
     };
 
+    const [openCollapse, setOpenCollapse] = React.useState(true);
+
+    function handleOpenMore() {
+        setOpenCollapse(!openCollapse);
+    }
+
+    function handleDontClose() {
+        setOpenCollapse(true);
+    }
+
     const avatarWidth = 200;
 
     const drawer = (
@@ -27,12 +40,24 @@ function Sidebar(props) {
             <Avatar alt="Adina Stoica" src={me}
                 sx={{ width: `${avatarWidth}px`, height: `${avatarWidth}px`, ml: `${(props.drawerWidth - avatarWidth) / 2}px` }} />
             <List>
-                <ListItem button key="about" selected={props.selectedKey === "about"} component={RouteLink} to="/about" >
+
+                <ListItem button onClick={handleOpenMore} key="about" selected={props.selectedKey === "about"} component={RouteLink} to="/about" >
                     <ListItemIcon>
                         <PersonOutlineIcon />
                     </ListItemIcon>
                     <ListItemText primary="About Me" />
+                    {openCollapse ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                 </ListItem>
+                <Collapse in={openCollapse} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItem onClick={handleDontClose} button sx={{ pl: 4 }} key="timeline" selected={props.selectedKey === "timeline"} component={RouteLink} to="/timeline">
+                            <ListItemIcon>
+                                <InsightsIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Timeline" />
+                        </ListItem>
+                    </List>
+                </Collapse>
                 <ListItem button key="resume" selected={props.selectedKey === "resume"} component={RouteLink} to="/resume">
                     <ListItemIcon>
                         <ArticleIcon />

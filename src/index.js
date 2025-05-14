@@ -6,6 +6,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 
 import App from "./App";
 import Resume from "./routes/resume";
+import MyTimeline from './routes/timeline';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
                 <Route path="/" element={<App />} />
                 <Route path="about" element={<App />} />
                 <Route path="resume" element={<Resume />} />
+                <Route path="timeline" element={<MyTimeline />} />
             </Routes>
         </HashRouter>
     </React.StrictMode>,
