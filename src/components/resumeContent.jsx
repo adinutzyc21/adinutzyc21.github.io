@@ -20,21 +20,21 @@ export default function ResumeContent(props) {
                 Below is an up-to-date PDF version of my resume. Alternatively,
                 you can view it on and download it from Google Drive as a{" "}
                 <Link
-                    href="https://drive.google.com/file/d/1-yBduZ8VU4Gxjpgi1DWN6U5bQ0uqPEsR/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1_Q2HuxzGlVr12RFY9a7thgpZk1jMePTB/view?usp=drive_link"
                     rel="noopener noreferrer"
                     target="_blank"
                     underline="none"
                 >
                     PDF
                 </Link>{" "}
-                or as a{" "}
+                or see it as a{" "}
                 <Link
-                    href="https://docs.google.com/document/d/1-3t0KQSIWwOH8PAXfo9t-FovKuEXWS3x/edit?usp=sharing&ouid=111707461551079757727&rtpof=true&sd=true"
+                    href="https://docs.google.com/document/d/1ttBr2cXKuSrYuXwSQ9YKx6RKnwYzuDIvPDU15pxvhXw/edit?usp=drive_link"
                     rel="noopener noreferrer"
                     target="_blank"
                     underline="none"
                 >
-                    Word document
+                    Google Doc
                 </Link>
                 .
             </Typography>
