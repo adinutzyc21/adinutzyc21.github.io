@@ -40,7 +40,7 @@ export default function ResumeContent(props) {
             </Typography>
             <iframe
                 title="Resume"
-                src="https://drive.google.com/file/d/1-yBduZ8VU4Gxjpgi1DWN6U5bQ0uqPEsR/preview"
+                src="https://drive.google.com/file/d/1_Q2HuxzGlVr12RFY9a7thgpZk1jMePTB/preview"
                 style={{ width: "100%", height: "700px" }}
                 allow="autoplay"
             ></iframe>
