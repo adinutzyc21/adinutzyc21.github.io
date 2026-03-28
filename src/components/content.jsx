@@ -1,4 +1,3 @@
-import React from "react";
 import {
     Box,
     Button,
@@ -11,6 +10,7 @@ import {
 import ArticleIcon from "@mui/icons-material/Article";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link as RouteLink } from "react-router-dom";
 
 export default function Content() {
@@ -132,7 +132,8 @@ export default function Content() {
                         rel="noreferrer"
                         variant="text"
                         size="large"
-                        startIcon={<LinkedInIcon />}
+                        startIcon={<LinkedInIcon fontSize="large" />}
+                        endIcon={<OpenInNewIcon fontSize="small" />}
                         sx={{
                             px: 3,
                             py: 1.2,
@@ -141,7 +142,7 @@ export default function Content() {
                             borderRadius: 999,
                         }}
                     >
-                        LinkedIn →
+                        LinkedIn
                     </Button>
 
                     <Button
@@ -151,7 +152,8 @@ export default function Content() {
                         rel="noreferrer"
                         variant="text"
                         size="large"
-                        startIcon={<GitHubIcon />}
+                        startIcon={<GitHubIcon fontSize="large" />}
+                        endIcon={<OpenInNewIcon fontSize="small" />}
                         sx={{
                             px: 2,
                             textTransform: "none",
@@ -159,7 +161,7 @@ export default function Content() {
                             color: "text.secondary",
                         }}
                     >
-                        GitHub →
+                        GitHub
                     </Button>
                 </Stack>
             </Stack>

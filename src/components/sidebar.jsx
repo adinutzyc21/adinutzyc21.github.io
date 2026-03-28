@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import {
     Avatar,
     Box,
@@ -7,17 +8,19 @@ import {
     IconButton,
     List,
     ListItem,
+    ListItemButton,
     ListItemIcon,
     ListItemText,
     Stack,
     Link,
 } from "@mui/material";
+
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ArticleIcon from "@mui/icons-material/Article";
 import MenuIcon from "@mui/icons-material/Menu";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link as RouteLink } from "react-router-dom";
 
 import me from "../images/me.jpeg";
@@ -42,61 +45,96 @@ function Sidebar(props) {
                     ml: `${(props.drawerWidth - avatarWidth) / 2}px`,
                 }}
             />
+
             <List>
-                <ListItem
-                    button
-                    key="about"
-                    selected={props.selectedKey === "about"}
-                    component={RouteLink}
-                    to="/about"
-                >
-                    <ListItemIcon>
-                        <PersonOutlineIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="About Me" />
+                <ListItem disablePadding>
+                    <ListItemButton
+                        selected={props.selectedKey === "about"}
+                        component={RouteLink}
+                        to="/about"
+                    >
+                        <ListItemIcon>
+                            <PersonOutlineIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="About Me" />
+                    </ListItemButton>
                 </ListItem>
-                <ListItem
-                    button
-                    key="resume"
-                    selected={props.selectedKey === "resume"}
-                    component={RouteLink}
-                    to="/resume"
-                >
-                    <ListItemIcon>
-                        <ArticleIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Resume" />
+
+                <ListItem disablePadding>
+                    <ListItemButton
+                        selected={props.selectedKey === "resume"}
+                        component={RouteLink}
+                        to="/resume"
+                    >
+                        <ListItemIcon>
+                            <ArticleIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Resume" />
+                    </ListItemButton>
                 </ListItem>
             </List>
+
             <Divider />
+
             <List>
-                <ListItem
-                    button
-                    key="code"
-                    component={Link}
-                    href="https://www.linkedin.com/in/adinutzyc21/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    underline="none"
-                >
-                    <ListItemIcon>
-                        <LinkedInIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="LinkedIn →" />
+                <ListItem disablePadding>
+                    <ListItemButton
+                        component={Link}
+                        href="https://www.linkedin.com/in/adinutzyc21/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        underline="none"
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1,
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                minWidth: 0,
+                            }}
+                        >
+                            <ListItemIcon>
+                                <LinkedInIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="LinkedIn" />
+                        </Box>
+
+                        <OpenInNewIcon fontSize="small" />
+                    </ListItemButton>
                 </ListItem>
-                <ListItem
-                    button
-                    key="code"
-                    component={Link}
-                    href="https://github.com/adinutzyc21"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    underline="none"
-                >
-                    <ListItemIcon>
-                        <GitHubIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="GitHub →" />
+
+                <ListItem disablePadding>
+                    <ListItemButton
+                        component={Link}
+                        href="https://github.com/adinutzyc21"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        underline="none"
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1,
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                minWidth: 0,
+                            }}
+                        >
+                            <ListItemIcon>
+                                <GitHubIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="GitHub" />
+                        </Box>
+
+                        <OpenInNewIcon fontSize="small" />
+                    </ListItemButton>
                 </ListItem>
             </List>
         </Stack>
@@ -112,6 +150,7 @@ function Sidebar(props) {
             >
                 <MenuIcon sx={{ width: "20px", justifyContent: "left" }} />
             </IconButton>
+
             <Box
                 component="nav"
                 sx={{ width: { sm: props.drawerWidth }, flexShrink: { sm: 0 } }}
@@ -122,7 +161,7 @@ function Sidebar(props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true,
                     }}
                     sx={{
                         display: { xs: "block", sm: "none" },
@@ -134,6 +173,7 @@ function Sidebar(props) {
                 >
                     {drawer}
                 </Drawer>
+
                 <Drawer
                     variant="permanent"
                     sx={{

@@ -1,6 +1,5 @@
-import React from "react";
-
 import { Typography, Box, Button, Stack, Link } from "@mui/material";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 export default function ResumeContent() {
     return (
         <Box
@@ -23,8 +22,9 @@ export default function ResumeContent() {
                     href="https://drive.google.com/file/d/1_Q2HuxzGlVr12RFY9a7thgpZk1jMePTB/view?usp=drive_link"
                     target="_blank"
                     rel="noreferrer"
+                    endIcon={<OpenInNewIcon fontSize="small" />}
                 >
-                    View PDF →
+                    View PDF
                 </Button>
                 <Button
                     variant="outlined"
@@ -32,8 +32,9 @@ export default function ResumeContent() {
                     href="https://docs.google.com/document/d/1ttBr2cXKuSrYuXwSQ9YKx6RKnwYzuDIvPDU15pxvhXw/edit?usp=drive_link"
                     target="_blank"
                     rel="noreferrer"
+                    endIcon={<OpenInNewIcon fontSize="small" />}
                 >
-                    Open in Google Drive →
+                    Open in Google Drive
                 </Button>
             </Stack>
 
