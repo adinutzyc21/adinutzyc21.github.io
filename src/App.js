@@ -10,7 +10,14 @@ export const drawerWidth = 240;
 function App() {
     return (
         <Stack direction="column">
-            <Box sx={{ display: "flex" }}>
+            <Box
+                sx={{
+                    display: "flex",
+                    minHeight: "100vh",
+                    background:
+                        "radial-gradient(circle at top right, rgba(25,118,210,0.06), transparent 35%), #fafafa",
+                }}
+            >
                 <CssBaseline />
                 <Sidebar drawerWidth={drawerWidth} selectedKey="about" />
                 <Content drawerWidth={drawerWidth} />

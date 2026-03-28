@@ -1,110 +1,168 @@
 import React from "react";
-import { Box, Typography, Link /*, Stack*/ } from "@mui/material";
-// import MyTimeline from './timeline';
-// import OutlinedCard from './card';
+import {
+    Box,
+    Button,
+    Link,
+    Stack,
+    Typography,
+    useMediaQuery,
+    useTheme,
+} from "@mui/material";
+import ArticleIcon from "@mui/icons-material/Article";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Link as RouteLink } from "react-router-dom";
 
-export default function Content(props) {
+export default function Content() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
     return (
         <Box
-            component="main"
             sx={{
-                flexGrow: 1,
-                p: 3,
-                width: { sm: `calc(100% - ${props.drawerWidth}px)` },
+                maxWidth: 980,
+                mx: "auto",
+                px: { xs: 1, sm: 3, md: 5 },
+                py: { xs: 4, md: 6 },
             }}
         >
-            <Typography variant="h2" component="div" gutterBottom>
-                Adina Raluca Stoica
-            </Typography>
-            <Typography paragraph>
-                Welcome to my website! I am a full-stack software engineer with
-                an interest in front-end development and improving user
-                experience. You might be interested in my{" "}
-                <Link
-                    href="https://drive.google.com/file/d/1-yBduZ8VU4Gxjpgi1DWN6U5bQ0uqPEsR/view?usp=sharing"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    underline="none"
+            <Stack spacing={4}>
+                <Box>
+                    <Typography
+                        variant="overline"
+                        sx={{
+                            letterSpacing: "0.18em",
+                            color: "text.secondary",
+                            fontWeight: 700,
+                        }}
+                    >
+                        Software Engineer • User-Facing Systems • Scalable
+                        Product Platforms
+                    </Typography>
+
+                    <Typography
+                        variant={isMobile ? "h3" : "h2"}
+                        sx={{
+                            mt: 1.5,
+                            fontWeight: 800,
+                            lineHeight: 1.08,
+                            maxWidth: 760,
+                        }}
+                    >
+                        Hi, I’m Adina.
+                    </Typography>
+
+                    <Typography
+                        variant={isMobile ? "h5" : "h4"}
+                        sx={{
+                            mt: 1.5,
+                            fontWeight: 500,
+                            lineHeight: 1.25,
+                            color: "text.secondary",
+                            maxWidth: 820,
+                        }}
+                    >
+                        I build the systems behind product decisions.
+                    </Typography>
+                </Box>
+
+                <Typography
+                    variant="body1"
+                    sx={{ fontSize: "1.08rem", lineHeight: 1.9 }}
                 >
-                    Resume
-                </Link>
-                , and you can also check out my{" "}
-                <Link
-                    href="https://www.linkedin.com/in/adinutzyc21/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    underline="none"
+                    Most of my work sits at the intersection of UX,
+                    experimentation, and infrastructure — where a small change
+                    in behavior can drive measurable impact.
+                </Typography>
+
+                <Typography
+                    variant="body1"
+                    sx={{ fontSize: "1.08rem", lineHeight: 1.9 }}
                 >
-                    LinkedIn
-                </Link>
-                .
-            </Typography>
-            <Typography paragraph>
-                Since June 2017, I have been a{" "}
-                <b>Senior Software Engineer at Bloomberg LP</b> in New York
-                City. I am currently in the <b>Recruiting Technology</b> team,
-                where I am working on a CRM solution for technical recruiters to
-                improve the sorcing of Bloomberg prospects. The solution
-                integrates core Bloomberg Terminal functionality with various
-                career websites through a Chrome extension written in React.{" "}
-                <br />
-                Before this, I was in two teams in the{" "}
-                <b>Asset Investment Management</b> organization, first on a team
-                working on a blotter for post trade, and later on a team working
-                on a key settings screen.
-            </Typography>
-            <Typography paragraph>
-                Before Bloomberg, I was a{" "}
-                <b>Software Engineer at Cerner Corporation</b> in Kansas City,
-                MO. One of my main projects there was a Mass Vaccination
-                solution for streamlining vaccine administration, which has been
-                more recently used by Cerner client hospitals across the world
-                to improve COVID-19 vaccine administration.
-            </Typography>
-            <Typography paragraph>
-                I received my{" "}
-                <b>
-                    Master's Degree in Computer Science from Washington
-                    University in St Louis{" "}
-                </b>{" "}
-                (Wash U) in August 2014. Between August 2011 and August 2014, I
-                conducted research in computer vision at Wash U.
-            </Typography>
-            <Typography paragraph>
-                I spent the Summer 2014 semester in Boston, interning at
-                Mitsubishi Electric Research Laboratories (MERL). There, I
-                worked in the Spatial Analysis group, on an indoor 3D
-                reconstruction algorithm using images and 3D models.
-            </Typography>
-            <Typography paragraph>
-                I received my{" "}
-                <b>Bachelor's Degree in Computer Science from Bard College</b>{" "}
-                in May 2011. At Bard, I was involved in the research activities
-                of the Bard Laboratory for Algebraic and Symbolic Computation. I
-                also took part, for a semester, in the Bard Globalization and
-                International Affairs Program in New York City (BGIA). As part
-                of the program, I was a Web Communication Intern at Human Rights
-                First.
-            </Typography>
-            <Typography paragraph>
-                During the summers of my freshman, sophomore and junior years at
-                Bard, I participated in various Research Experience For
-                Undergraduates (REU) programs. The first two summers I was at
-                the University of Houston, performing research on thermal
-                imaging for stress recognition. The last summer I went to
-                Clemson University, where I performed research on distance
-                estimation in virtual environments.
-            </Typography>
-            {/* <Typography paragraph>
-                You can read more about my research and in the Projects section of this website.
-            </Typography>
-            <Stack direction="row" spacing={2}>
-                <OutlinedCard />
-                <OutlinedCard />
-                <OutlinedCard />
-                <OutlinedCard />
+                    At Bloomberg, I’ve built and scaled subscription platforms
+                    that power dynamic paywalls across web and mobile, enable
+                    rapid experimentation and audience targeting, and directly
+                    impact conversion, engagement, and revenue.
+                </Typography>
+
+                <Typography
+                    variant="body1"
+                    sx={{ fontSize: "1.08rem", lineHeight: 1.9 }}
+                >
+                    I’m especially interested in systems that are configurable
+                    instead of hardcoded, experiment-driven instead of
+                    opinion-driven, and simple to use but powerful under the
+                    hood.
+                </Typography>
+
+                <Typography
+                    variant="body1"
+                    sx={{ fontSize: "1.08rem", lineHeight: 1.9 }}
+                >
+                    Lately, I’ve also been exploring how AI can augment both
+                    user experiences and developer workflows.
+                </Typography>
+
+                <Stack
+                    direction={{ xs: "column", sm: "row" }}
+                    spacing={2}
+                    sx={{ pt: 1 }}
+                >
+                    <Button
+                        component={RouteLink}
+                        to="/resume"
+                        variant="contained"
+                        size="large"
+                        startIcon={<ArticleIcon />}
+                        sx={{
+                            px: 3,
+                            py: 1.2,
+                            textTransform: "none",
+                            fontWeight: 700,
+                            borderRadius: 999,
+                        }}
+                    >
+                        Resume
+                    </Button>
+
+                    <Button
+                        component={Link}
+                        href="https://www.linkedin.com/in/adinutzyc21"
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="text"
+                        size="large"
+                        startIcon={<LinkedInIcon />}
+                        sx={{
+                            px: 3,
+                            py: 1.2,
+                            textTransform: "none",
+                            fontWeight: 700,
+                            borderRadius: 999,
+                        }}
+                    >
+                        LinkedIn →
+                    </Button>
+
+                    <Button
+                        component={Link}
+                        href="https://github.com/adinutzyc21"
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="text"
+                        size="large"
+                        startIcon={<GitHubIcon />}
+                        sx={{
+                            px: 2,
+                            textTransform: "none",
+                            fontWeight: 600,
+                            color: "text.secondary",
+                        }}
+                    >
+                        GitHub →
+                    </Button>
+                </Stack>
             </Stack>
-            <MyTimeline /> */}
         </Box>
     );
 }

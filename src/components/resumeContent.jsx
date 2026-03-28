@@ -1,42 +1,44 @@
 import React from "react";
 
-import { Typography, Box, Link } from "@mui/material";
-export default function ResumeContent(props) {
-    // let resumeHeight = (window.innerHeight <= 700);
-
+import { Typography, Box, Button, Stack, Link } from "@mui/material";
+export default function ResumeContent() {
     return (
         <Box
-            component="main"
             sx={{
                 flexGrow: 1,
-                p: 3,
-                width: { sm: `calc(100% - ${props.drawerWidth}px)` },
+                maxWidth: 980,
+                mx: "auto",
+                px: { xs: 1, sm: 3, md: 5 },
+                py: { xs: 4, md: 6 },
             }}
         >
-            <Typography variant="h2" component="div" gutterBottom>
-                Resume
-            </Typography>
-            <Typography paragraph>
-                Below is an up-to-date PDF version of my resume. Alternatively,
-                you can view it on and download it from Google Drive as a{" "}
-                <Link
+            <Stack
+                direction="row"
+                spacing={2}
+                sx={{ mb: 2, maxWidth: 980, mx: "auto" }}
+            >
+                <Button
+                    variant="contained"
+                    component={Link}
                     href="https://drive.google.com/file/d/1_Q2HuxzGlVr12RFY9a7thgpZk1jMePTB/view?usp=drive_link"
-                    rel="noopener noreferrer"
                     target="_blank"
-                    underline="none"
+                    rel="noreferrer"
                 >
-                    PDF
-                </Link>{" "}
-                or see it as a{" "}
-                <Link
+                    View PDF →
+                </Button>
+                <Button
+                    variant="outlined"
+                    component={Link}
                     href="https://docs.google.com/document/d/1ttBr2cXKuSrYuXwSQ9YKx6RKnwYzuDIvPDU15pxvhXw/edit?usp=drive_link"
-                    rel="noopener noreferrer"
                     target="_blank"
-                    underline="none"
+                    rel="noreferrer"
                 >
-                    Google Doc
-                </Link>
-                .
+                    Open in Google Drive →
+                </Button>
+            </Stack>
+
+            <Typography variant="body2" color="text.secondary">
+                Embedded preview below
             </Typography>
             <iframe
                 title="Resume"
