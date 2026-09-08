@@ -70,19 +70,22 @@ export default function Content() {
                     variant="body1"
                     sx={{ fontSize: "1.08rem", lineHeight: 1.9 }}
                 >
-                    Most of my work sits at the intersection of UX,
-                    experimentation, and infrastructure — where a small change
-                    in behavior can drive measurable impact.
+                    My work sits at the intersection of product,
+                    experimentation, and infrastructure, from the experiences
+                    that drive conversion to the subscription and payment
+                    systems behind them.
                 </Typography>
 
                 <Typography
                     variant="body1"
                     sx={{ fontSize: "1.08rem", lineHeight: 1.9 }}
                 >
-                    At Bloomberg, I’ve built and scaled subscription platforms
-                    that power dynamic paywalls across web and mobile, enable
-                    rapid experimentation and audience targeting, and directly
-                    impact conversion, engagement, and revenue.
+                    At Bloomberg, I’ve built and scaled platforms across web and
+                    mobile, including configurable paywalls, experimentation and
+                    audience-targeting systems, mobile subscription experiences,
+                    and payment infrastructure. I like owning problems end to
+                    end, especially when they cross the boundary between user
+                    experience and the systems underneath it.
                 </Typography>
 
                 <Typography
@@ -99,8 +102,9 @@ export default function Content() {
                     variant="body1"
                     sx={{ fontSize: "1.08rem", lineHeight: 1.9 }}
                 >
-                    Lately, I’ve also been exploring how AI can augment both
-                    user experiences and developer workflows.
+                    My background also includes computer vision research, and
+                    lately I’ve been exploring how AI can augment both user
+                    experiences and developer workflows.
                 </Typography>
 
                 <Stack
